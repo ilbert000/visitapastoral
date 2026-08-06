@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos os Materiais | Visita Pastoral</title>
+    <meta name="description"
+        content="Acesse todos os materiais e recursos do Visita Pastoral. Sermões, estudos bíblicos, esboços e muito mais para sua jornada ministerial." />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+        .materials-section {
+            padding: 100px 8%;
+            background: #f8fafc;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 50px auto 0;
+        }
+
+        .material-item {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(0,0,0,.07);
+            transition: .35s;
+        }
+
+        .material-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,.12);
+        }
+
+        .material-item h3 {
+            font-size: 1.3rem;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .material-item p {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .material-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #5A63F6, #3949D9);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .material-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(90,99,246,.35);
+        }
+
+        .app-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .app-btn {
+            flex: 1 1 160px;
+            min-width: 140px;
+            text-align: center;
+            padding: 14px 22px;
+            border-radius: 999px;
+        }
+
+        .apple-store {
+            background: linear-gradient(135deg, #111827, #1d4ed8);
+        }
+
+        .play-store {
+            background: linear-gradient(135deg, #111827, #10b981);
+        }
+
+        .app-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 30px rgba(0,0,0,.12);
+        }
+
+        .materials-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .materials-header h1 {
+            font-size: 2.5rem;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .materials-header p {
+            font-size: 1.1rem;
+            color: #475569;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #5A63F6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .back-link:hover {
+            color: #3949D9;
+        }
+
+        @media(max-width:900px) {
+            .materials-section {
+                padding: 60px 6%;
+            }
+
+            .materials-header h1 {
+                font-size: 2rem;
+            }
+
+            .materials-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media(max-width:600px) {
+            .materials-section {
+                padding: 40px 4%;
+            }
+
+            .materials-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-overlay"></div>
+
+    <section class="header">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./assets/logo.png" alt="Logo do Ministério Pastoral" />
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu">
+            <nav>
+                <ul>
+                    <li><a href="https://canva.link/1pfvrug77hlv6b9" target="_blank" rel="noopener noreferrer">Pr. João Paulo Delmondes</a></li>
+                    <li><a href="./pages/gabriel.html">Pr. Gabriel Lincy</a></li>
+                    <li><a href="./pages/philippe.html">Pr. Philippe Rodrigues</a></li>
+                    <li><a href="./materials.html">Aplicativo</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <a class="btn-contact" href="https://wa.me/5569999991983" target="_blank" rel="noopener noreferrer">Tirar dúvidas</a>
+    </section>
+
+    <section class="materials-section">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <a href="./index.html" class="back-link">← Voltar ao início</a>
+
+            <div class="materials-header">
+                <h1>Todos os Materiais</h1>
+                <p>Acesse uma seleção completa de recursos, estudos e conteúdos preparados pelos nossos pastores para enriquecer sua jornada ministerial.</p>
+            </div>
+
+            <div class="materials-grid">
+                <div class="material-item">
+                    <h3>Gabriel Lincy | Materiais e Semana Santa</h3>
+                    <p>Coleção completa de sermões preparados por nossos pastores, com estudos profundos e aplicações práticas para sua congregação.</p>
+                    <a href="./pages/gabriel.html" target="_blank" rel="noopener noreferrer" class="material-btn">Solicitar acesso</a>
+                </div>
+
+                <div class="material-item">
+                    <h3>Philippe Rodrigues | Semana Jovem – Coração de Aprendiz</h3>
+                    <p>Análises detalhadas de passagens e livros da Bíblia, com contexto histórico, comentários e reflexões aplicáveis ao ministério.</p>
+                    <a href="./pages/philippe.html" target="_blank" rel="noopener noreferrer" class="material-btn">Solicitar acesso</a>
+                </div>
+
+                <div class="material-item">
+                    <h3>Pr. João Paulo Delmondes</h3>
+                    <p>Esboços estruturados de mensagens, com divisões claras, pontos principais e sugestões de aplicação para predicadores.</p>
+                    <a href="https://canva.link/1pfvrug77hlv6b9" target="_blank" rel="noopener noreferrer" class="material-btn">Solicitar acesso</a>
+                </div>
+
+                <div class="material-item">
+                    <h3>Aplicativo</h3>
+                    <p>Baixe o Visita Pastoral diretamente na sua loja de aplicativos e tenha acesso rápido a todos os recursos.</p>
+                    <div class="app-links">
+                        <a href="https://apps.apple.com/br/app/visita-pastoral-2-0/id6769611547" target="_blank" rel="noopener noreferrer" class="material-btn app-btn apple-store">Apple Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=br.com.visitapastoral.app" target="_blank" rel="noopener noreferrer" class="material-btn app-btn play-store">Play Store</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./assets/logo.png" alt="Visita Pastoral">
+                <p>
+                    Uma plataforma criada por pastores para pastores,
+                    oferecendo materiais, ferramentas e apoio para fortalecer
+                    o ministério e servir com excelência.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div>
+                    <h3>Navegação</h3>
+                    <a href="./index.html">Início</a>
+                    <a href="./materials.html">Materiais</a>
+                    <a href="https://wa.me/5569999991983" target="_blank" rel="noopener noreferrer">Contato</a>
+                </div>
+
+                <div>
+                    <h3>Pastores</h3>
+                    <a href="https://canva.link/1pfvrug77hlv6b9" target="_blank" rel="noopener noreferrer">João Paulo Delmondes</a>
+                    <a href="./pages/gabriel.html">Gabriel Lincy</a>
+                    <a href="./pages/philippe.html">Philippe Rodrigues</a>
+                </div>
+
+                <div>
+                    <h3>Contato</h3>
+                    <p>contato@visitapastoral.com</p>
+                    <p>+55 (69) 99999-1983</p>
+                    <p>Bahia • Brasil</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Visita Pastoral. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

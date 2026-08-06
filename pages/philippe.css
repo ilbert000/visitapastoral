@@ -1,0 +1,805 @@
+/* =====================================
+   SEMANA JOVEM - CORAÇÃO DE APRENDIZ
+   PHILIPPE RODRIGUES
+===================================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+:root{
+
+    --primary:#111827;
+    --blue:#2563eb;
+    --purple:#7c3aed;
+    --gold:#f59e0b;
+    --white:#fff;
+    --bg:#f8fafc;
+    --text:#475569;
+
+}
+
+
+body{
+
+    font-family:"Poppins",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+
+
+.container{
+
+    width:min(1200px,90%);
+    margin:auto;
+
+}
+
+
+
+/* =============================
+ HEADER
+============================= */
+
+
+.site-header{
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:
+    rgba(17,24,39,.92);
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+.navbar{
+
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+
+.site-brand{
+
+    color:white;
+    font-size:1.5rem;
+    font-weight:700;
+    text-decoration:none;
+
+}
+
+
+.menu-toggle{
+
+    display:none;
+    border:none;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    font-size:1.4rem;
+    padding:10px;
+}
+
+
+.site-nav{
+
+    display:flex;
+    gap:25px;
+    align-items:center;
+
+}
+
+
+.site-nav a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+
+.site-nav a:hover{
+
+    color:#f59e0b;
+
+}
+
+
+.site-nav button{
+
+    border:none;
+    cursor:pointer;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(135deg,#f59e0b,#fde68a);
+
+    font-weight:700;
+
+}
+
+
+.menu-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+    z-index: 998;
+}
+
+.menu-overlay.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/* =============================
+ HERO
+============================= */
+
+
+.hero{
+
+    min-height:720px;
+
+    display:flex;
+    align-items:center;
+
+
+    background:
+
+    radial-gradient(
+    circle at top left,
+    rgba(124,58,237,.25),
+    transparent 35%
+    ),
+
+    linear-gradient(
+    135deg,
+    #ffffff,
+    #eef2ff
+    );
+
+
+}
+
+
+
+.hero-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+
+.hero-copy small{
+
+
+    color:var(--purple);
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+.hero-title{
+
+
+    margin-top:20px;
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    line-height:1;
+
+    color:#111827;
+
+
+}
+
+
+
+.hero-text{
+
+
+    margin-top:25px;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    max-width:550px;
+
+
+}
+
+
+
+.hero-actions{
+
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:20px;
+
+
+}
+
+
+
+.btn,
+.btn-secondary{
+
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn{
+
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+    );
+
+    color:white;
+
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 20px 40px rgba(124,58,237,.3);
+
+}
+
+
+
+.btn-secondary{
+
+
+    border:2px solid #7c3aed;
+
+    color:#7c3aed;
+
+
+}
+
+
+
+.btn-secondary:hover{
+
+
+    background:#7c3aed;
+
+    color:white;
+
+
+}
+
+
+
+
+/* =============================
+ IMAGEM
+============================= */
+
+
+.hero-visual{
+
+    position:relative;
+
+}
+
+
+
+.hero-figure img{
+
+
+    width:100%;
+
+    border-radius:35px;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.hero-card{
+
+
+    position:absolute;
+
+    bottom:-50px;
+
+    left:-40px;
+
+
+    width:330px;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.12);
+
+
+}
+
+
+
+.label-variant{
+
+
+    color:#7c3aed;
+
+    font-weight:700;
+
+
+}
+
+
+
+
+/* =============================
+ SEÇÕES
+============================= */
+
+
+.section{
+
+    padding:100px 0;
+
+}
+
+
+
+.section-highlight{
+
+
+    color:#7c3aed;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+.section-title{
+
+
+    margin-top:10px;
+
+    font-size:2.5rem;
+
+    color:#111827;
+
+
+}
+
+
+
+.section-copy{
+
+
+    max-width:700px;
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+
+}
+
+
+
+/* =============================
+ CARDS DOS 8 DIAS
+============================= */
+
+
+.cards-grid{
+
+
+    display:grid;
+
+    gap:30px;
+
+
+}
+
+
+
+.cards-grid-4{
+
+
+    grid-template-columns:repeat(4,1fr);
+
+
+}
+
+
+
+.material-card{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    border-top:5px solid #7c3aed;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.07);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+.material-card:hover{
+
+
+    transform:
+
+    translateY(-12px);
+
+
+    border-color:#f59e0b;
+
+
+    box-shadow:
+
+    0 25px 50px rgba(124,58,237,.15);
+
+
+}
+
+
+
+.card-label{
+
+
+    width:55px;
+
+    height:55px;
+
+
+    display:grid;
+
+    place-items:center;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #7c3aed,
+    #2563eb
+    );
+
+
+    color:white;
+
+
+    border-radius:50%;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+.material-card h3{
+
+
+    margin-top:25px;
+
+    min-height:70px;
+
+    color:#111827;
+
+
+}
+
+
+
+.card-link{
+
+
+    display:inline-block;
+
+    margin-top:20px;
+
+
+    padding:10px 20px;
+
+
+    border-radius:30px;
+
+
+    color:#7c3aed;
+
+
+    background:#ede9fe;
+
+
+    text-decoration:none;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+.card-link:hover{
+
+
+    background:#7c3aed;
+
+    color:white;
+
+
+}
+
+
+
+
+/* =============================
+ FOOTER
+============================= */
+
+
+.site-footer{
+
+
+    padding:50px 0;
+
+    text-align:center;
+
+
+}
+
+
+
+/* =============================
+ RESPONSIVO
+============================= */
+
+
+@media(max-width:1000px){
+
+.hero-content{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.hero-card{
+    position:relative;
+    left:0;
+    bottom:0;
+    margin-top:25px;
+    width:min(100%,320px);
+}
+
+.cards-grid-4{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.navbar{
+    min-height:auto;
+    padding:16px 0;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.site-nav{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+}
+
+@media(max-width:700px){
+
+.cards-grid-4{
+    grid-template-columns:1fr;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+.navbar{
+    justify-content:space-between;
+    align-items:center;
+    gap:0;
+    padding:16px 0;
+}
+
+.site-nav{
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:min(320px,85%);
+    background: rgba(17,24,39,0.98);
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:0;
+    padding:100px 20px 20px;
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    opacity:0;
+    z-index:999;
+}
+
+.site-nav.active{
+    transform: translateX(0);
+    opacity:1;
+}
+
+.site-nav a,
+.site-nav button{
+    width:100%;
+    text-align:left;
+    font-size:1rem;
+    padding:14px 0;
+    display:block;
+}
+
+.site-nav a{
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.site-nav button{
+    padding:12px 18px;
+    border-radius:30px;
+    margin:12px 0;
+}
+
+.site-nav button[data-app-action] {
+    width:100%;
+}
+
+.site-brand{
+    width:auto;
+}
+
+}
+.hero-actions{
+    flex-direction:column;
+}
+
+.hero-title{
+    font-size:2.8rem;
+}
+
+.material-card{
+    padding:24px;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+.site-brand{
+    width:100%;
+    text-align:center;
+}
+
+.site-nav a,
+.site-nav button{
+    font-size:0.95rem;
+}
+
+.navbar{
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 0;
+}
+
+.site-nav{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    width:100%;
+    justify-items:center;
+}
+
+.site-nav a,
+.site-nav button{
+    width:100%;
+    text-align:center;
+    white-space:normal;
+    padding:10px 14px;
+}
+
+.site-nav button{
+    max-width:240px;
+}
+
+}
