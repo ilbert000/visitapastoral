@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr. João Paulo Delmondes | Materiais</title>
+
+    <meta name="description" content="Materiais em PDF e PowerPoint do Pastor João Paulo Delmondes.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --text: #334155;
+            --muted: #64748b;
+            --white: #ffffff;
+            --shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8fbff 0%, #f5f7ff 100%);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .contact-btn {
+            background: linear-gradient(135deg, var(--accent), #ffd166);
+            color: var(--primary) !important;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 700;
+        }
+
+        .hero {
+            padding: 90px 0 70px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 14px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--secondary);
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            border: 1px solid rgba(15, 23, 42, 0.1);
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .materials-section {
+            padding: 70px 0;
+        }
+
+        .materials-section.alt {
+            background: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(15, 23, 42, 0.05);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+        }
+
+        .section-header {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.7rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: var(--muted);
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .material-card {
+            background: var(--white);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            padding: 24px;
+            border-radius: 20px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+        }
+
+        .material-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--white);
+        }
+
+        .material-icon.pdf {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+
+        .material-icon.ppt {
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+        }
+
+        .material-card h3 {
+            font-size: 1.06rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .material-card p {
+            color: var(--muted);
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+
+        .material-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--secondary);
+            font-weight: 600;
+            transition: all 0.25s ease;
+        }
+
+        .material-btn:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .cta {
+            padding: 60px 0 90px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .cta p {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        footer {
+            padding: 24px 0 40px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 920px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .materials-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+            <a href="../index.html" class="logo">
+                Visita Pastoral
+            </a>
+
+            <nav>
+
+                <a href="../index.html">Início</a>
+                <a href="#pdfs">PDFs</a>
+                <a href="#powerpoints">PowerPoint</a>
+
+                <a href="https://wa.me/5569999991983" target="_blank" class="contact-btn">
+
+                    Contato
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="badge">
+
+                        Materiais Exclusivos
+
+                    </span>
+
+                    <h1>
+
+                        Pr. João Paulo Delmondes
+
+                    </h1>
+
+                    <p>
+
+                        Esboços estruturados de mensagens, apresentações em PowerPoint,
+                        estudos bíblicos e materiais de apoio preparados para auxiliar
+                        pastores, líderes e evangelistas.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#pdfs" class="btn-primary">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                            Ver PDFs
+
+                        </a>
+
+                        <a href="#powerpoints" class="btn-secondary">
+
+                            <i class="fa-solid fa-file-powerpoint"></i>
+
+                            PowerPoint
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <img src="../assets/fundo.png" alt="João Paulo Delmondes">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PDFs -->
+
+        <section id="pdfs" class="materials-section">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                        Materiais em PDF
+
+                    </h2>
+
+                    <p>
+
+                        Baixe estudos, sermões e materiais preparados para fortalecer seu ministério.
+
+                    </p>
+
+                </div>
+
+                <div class="materials-grid">
+
+                    <article class="material-card">
+
+                        <div class="material-icon pdf">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <h3>Sermão 01</h3>
+
+                        <p>Esboço completo para pregação.</p>
+
+                        <a href="../arquivos/A-Guerra-que-Explica-Tudo.pdf" target="_blank" class="material-btn">
+
+                            Baixar PDF
+
+                        </a>
+
+                    </article>
+
+                    <!-- <article class="material-card">
+
+                        <div class="material-icon pdf">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <h3>Sermão 02</h3>
+
+                        <p>Material evangelístico.</p>
+
+                        <a href="#" target="_blank" class="material-btn">
+
+                            Baixar PDF
+
+                        </a>
+
+                    </article>
+
+                    <article class="material-card">
+
+                        <div class="material-icon pdf">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <h3>Estudo Bíblico</h3>
+
+                        <p>Material para pequenos grupos.</p>
+
+                        <a href="#" target="_blank" class="material-btn">
+
+                            Baixar PDF
+
+                        </a>
+
+                    </article>
+
+                    <article class="material-card">
+
+                        <div class="material-icon pdf">
+
+                            <i class="fa-solid fa-file-pdf"></i>
+
+                        </div>
+
+                        <h3>Seminário</h3>
+
+                        <p>Apostila completa.</p>
+
+                        <a href="#" target="_blank" class="material-btn">
+
+                            Baixar PDF
+
+                        </a>
+
+                    </article> -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- POWERPOINT -->
+
+        <section id="powerpoints" class="materials-section alt">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <h2>
+
+                        <i class="fa-solid fa-file-powerpoint"></i>
+
+                        Apresentações PowerPoint
+
+                    </h2>
+
+                    <p>
+
+                        Slides prontos para cultos, semanas de oração e evangelismo.
+
+                    </p>
+
+                </div>
+
+                <div class="materials-grid">
+
+                    <!-- <article class="material-card">
+
+                        <div class="material-icon ppt">
+
+                            <i class="fa-solid fa-file-powerpoint"></i>
+
+                        </div>
+
+                        <h3>Semana Santa</h3>
+
+                        <p>Slides completos.</p>
+
+                        <a href="#" target="_blank" class="material-btn">
+
+                            Baixar PPT
+
+                        </a>
+
+                    </article>
+
+                    <article class="material-card">
+
+                        <div class="material-icon ppt">
+
+                            <i class="fa-solid fa-file-powerpoint"></i>
+
+                        </div>
+
+                        <h3>Evangelismo</h3>
+
+                        <p>Apresentação em PowerPoint.</p>
+
+                        <a href="#" target="_blank" class="material-btn">
+
+                            Baixar PPT
+
+                        </a>
+
+                    </article>
+
+                    <article class="material-card">
+
+                        <div class="material-icon ppt">
+
+                            <i class="fa-solid fa-file-powerpoint"></i>
+
+                        </div>
+
+                        <h3>Família</h3>
+
+                        <p>Slides para sermão.</p>
+
+                        <a href="#" target="_blank" class="material-btn">
+
+                            Baixar PPT
+
+                        </a>
+
+                    </article>-->
+
+                    <article class="material-card">
+
+                        <div class="material-icon ppt">
+
+                            <i class="fa-solid fa-file-powerpoint"></i>
+
+                        </div> 
+
+                        <h3>Esperança</h3>
+
+                        <p>Mensagem ilustrada.</p>
+
+                        <a href="../arquivos/Os Plantadores Estatico.pptx" target="_blank" class="material-btn">
+
+                            Baixar PPT
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- <section class="cta">
+
+            <div class="container">
+
+                <h2>
+
+                    Mais materiais em breve
+
+                </h2>
+
+                <p>
+
+                    Novos estudos, sermões e apresentações serão adicionados regularmente.
+
+                </p>
+
+                <a href="https://wa.me/5569999991983" target="_blank" class="btn-primary">
+
+                    Solicitar Material
+
+                </a>
+
+            </div>
+
+        </section> -->
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+
+                © 2026 Visita Pastoral • Pr. João Paulo Delmondes
+
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
